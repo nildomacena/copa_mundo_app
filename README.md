@@ -1,16 +1,11 @@
-# copa_mundo_app
+# App Copa do Mundo
 
-A new Flutter project.
+O aplicativo para você acompanhar os jogos e resultados da Copa de Mundo Qatar 2022
 
-## Getting Started
+## Fique à vontade para clonar e instalar o app
 
-This project is a starting point for a Flutter application.
+## PRINTS
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1662725012](https://user-images.githubusercontent.com/18093955/189346471-2e7632dd-e4eb-4046-b6ee-004832d84892.png)
+![Screenshot_1662725019](https://user-images.githubusercontent.com/18093955/189346476-1c1d5fbb-ad9a-48c4-8eb8-9aa34daad53d.png)
+![Screenshot_1662725015](https://user-images.githubusercontent.com/18093955/189346479-a74a6a8f-8ccb-4694-9557-a81cb62f321e.png)
