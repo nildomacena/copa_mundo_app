@@ -8,7 +8,7 @@ class TeamsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Team> teams = apiProvider.teams;
+    List<Team> teams = [...apiProvider.teams];
     teams.sort(
       (a, b) => a.name.compareTo(b.name),
     );

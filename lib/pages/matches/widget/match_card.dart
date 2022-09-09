@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:copa_mundo_app/data/api_provider.dart';
 import 'package:copa_mundo_app/model/match.dart';
 import 'package:copa_mundo_app/shared/util.dart';
@@ -16,7 +17,7 @@ class MatchCard extends StatelessWidget {
           color: Colors.white.withOpacity(.5),
           child: Container(
             height: 120,
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
             width: MediaQuery.of(context).size.width,
             child: Column(
               children: [
@@ -24,15 +25,22 @@ class MatchCard extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        match.home.name,
-                        style: const TextStyle(fontSize: 20),
+                      Expanded(
+                        child: AutoSizeText(
+                          match.home.name,
+                          maxLines: 2,
+                          textAlign: TextAlign.right,
+                          style: const TextStyle(fontSize: 20),
+                        ),
                       ),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 10),
                         height: 40,
-                        child:
-                            Image.network(apiProvider.getImageTeam(match.home)),
+                        width: 40,
+                        child: Image.network(
+                          apiProvider.getImageTeam(match.home),
+                          fit: BoxFit.fill,
+                        ),
                       ),
                       const Text(
                         'X',
@@ -41,12 +49,19 @@ class MatchCard extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 10),
                         height: 40,
+                        width: 40,
                         child: Image.network(
-                            apiProvider.getImageTeam(match.visitor)),
+                          apiProvider.getImageTeam(match.visitor),
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                      Text(
-                        match.visitor.name,
-                        style: const TextStyle(fontSize: 20),
+                      Expanded(
+                        child: AutoSizeText(
+                          match.visitor.name,
+                          textAlign: TextAlign.left,
+                          maxLines: 2,
+                          style: const TextStyle(fontSize: 20),
+                        ),
                       ),
                     ],
                   ),
